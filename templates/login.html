@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Verification page for SMSD Annual Day 2023">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+    <style>
+        body{
+            user-select: none;
+        }
+
+        body{
+            -webkit-user-drag: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+       
+        
+        <form method="POST" action="/">
+            {{ form.hidden_tag() }}
+            <label for="admission_number">Admission Number:</label>
+            <input type="text" id="admission_number" name="admission_number" required><br>
+           
+            <label for="passcode">Passcode:</label>
+            <div class="input-box">
+                <input type="password" name="passcode" id="passcode" required><br>
+                <img src="/static/eye.png" alt="Show Passcode" id="eyeicon">
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+
+
+    <script>
+        let eyeicon = document.getElementById('eyeicon');
+        let password = document.getElementById('passcode');
+
+        eyeicon.onclick = function() {
+            if(password.type == "password"){
+                password.type = "text"
+            } else{
+                password.type = "password";
+            }
+        }
+
+        document.addEventListener('contextmenu', function(e){
+            e.preventDefault();
+        })
+    </script>
+</body>
+</html>
