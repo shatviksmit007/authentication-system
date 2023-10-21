@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pass for an individual for entry">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='welcome.css') }}">
+    <style>
+        body{
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pass-box">
+    <h1>St. Mary's School, Dwarka Sector-19</h1>
+    <h2>Annual Day 2023</h2>
+    <div class="pass-info">
+    <p>Student's Name: {{ student_dict.name }}</p>
+    <p>Admission Number: {{ student_dict.admission_number }}</p>
+    <p>Father's Name:{{ student_dict.father_name }} </p>
+    <p>Mother's Name: {{ student_dict.mother_name }}</p>
+    <p>Class and Section: {{student_dict.class }}</p>
+</div>
+</div>
+    <script>
+        window.addEventListener('keydown', function (e) {
+            if (e.key === 'PrintScreen' || (e.key === 'Insert' && e.shiftKey)) {
+                e.preventDefault();
+              
+                alert('Cannot take a screenshot due to security reasons.');
+            }
+            
+        });
+        document.addEventListener('contextmenu', function(e){
+            e.preventDefault();
+        })
+
+    
+    </script>
+</body>
+</html>
