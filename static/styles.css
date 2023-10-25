@@ -30,13 +30,14 @@ body{
     grid-area: design;
     display: none;
     position: relative;
+    background-color:#98d8e3;
 }
 .rotate-45{
     transform: rotate(-45deg);
 }
 .design .pill-1{
-    bottom: 0;
-    left: -40px;
+    bottom: 75px;
+    left: -50px;
     position: absolute;
     width: 80px;
     height: 200px;
@@ -46,7 +47,7 @@ body{
 
 .design .pill-2{
     top: -100px;
-    left: -80px;
+    left: 30px;
     position: absolute;
     height: 450px;
     width: 220px;
@@ -57,7 +58,7 @@ body{
 
 .design .pill-3{
     top: -100px;
-    left: 160px;
+    left: 350px;
     position: absolute;
     height: 200px;
     width: 100px;
@@ -67,7 +68,7 @@ body{
 
 .design .pill-4{
     bottom: -180px;
-    left: 220px;
+    left: 500px;
     position: absolute;
     height: 300px;
     width: 120px;
@@ -86,18 +87,19 @@ body{
 }
 
 .authenticate h3.title{
-    margin: 15px 0;
+    margin: 25px 0;
+    font-size: 48px;;
 }
 
 .text-input{
     background: #e6e6e6;
-    height: 40px;
+    height: 50px;
     display: flex;
-    width: 60%;
+    width: 250px;
     align-items: center;
     border-radius: 10px;
     padding: 0 15px;
-    margin: 5px 0;
+    margin: -10px 0 15px ;
 }
 
 .text-input input{
@@ -114,11 +116,11 @@ body{
 }
 
 img {
-    width: 30px;
+    width: 30px;    
     cursor: pointer;
     position: absolute;
-    right: 10px; 
-    top: 50%;
+    right: 155px; 
+    top: 58.5%;
     transform: translateY(-50%);
 }
 ::placeholder{
@@ -127,14 +129,14 @@ img {
 }
 
 .auth-btn{
-    width: 68%;
+    width: 100%;
     padding: 10px;
     color: white;
     background: linear-gradient(to right, #ff966d, #fa583d, #89379c);
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 
