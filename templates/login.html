@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Verification page for SMSD Annual Day 2023">
+    <title>Authenticate</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+
+    <style>
+        body{
+            user-select: none;
+        }
+
+        body{
+            -webkit-user-drag: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="design">
+            <div class="pill-1 rotate-45"></div>
+            <div class="pill-2 rotate-45"></div>
+            <div class="pill-3 rotate-45"></div>
+            <div class="pill-4 rotate-45"></div>
+        </div>
+        <div class="authenticate">
+            <h3 class="title">User Authentication</h3>
+            <form action="#" method="POST">
+            {{ form.hidden_tag() }}
+            <div class="text-input">
+                <i class="ri-user-fill"></i>
+                <input type="text" id="admission_number" name="admission_number" required placeholder="admission number">
+            </div>
+            <div class="text-input">
+                <i class="ri-lock-fill"></i>
+                <input type="password" name="passcode" id="passcode" required placeholder="passcode">
+                <img src="/static/eye.png" alt="Show Passcode" id="eyeicon">
+            </div>
+            <button class="auth-btn">AUTHENTICATE</button>
+            </form>
+            {% if error %}
+            <p class="error">{{ error }}</p>
+            {% endif %} 
+        </div>
+    </div>
+
+
+    <script>
+        let eyeicon = document.getElementById('eyeicon');
+        let password = document.getElementById('passcode');
+
+        eyeicon.onclick = function() {
+            if(password.type == "password"){
+                password.type = "text"
+            } else{
+                password.type = "password";
+            }
+        }
+
+        document.addEventListener('contextmenu', function(e){
+            e.preventDefault();
+        })
+    </script>
+</body>
+</html>
