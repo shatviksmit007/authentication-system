@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/home.css">
+    <title>Login Page</title>
+</head>
+<body>
+<div class="container">
+        <div class="title">Login</div> 
+        <form action="/login" method="POST" id='registration-form'>
+            {{ form.hidden_tag() }}
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Admission Number</span>
+                    <input type="text" placeholder="Enter your 4 digit admission number" required id="admission_number" name="admission_number">
+                </div>
+                {% if form.admission_number.errors %}
+                    <p class="error">{{ form.admission_number.errors[0] }}</p>
+                {% endif %}
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" placeholder="Enter your Name" required id="name" name="name">
+                </div>
+                <div class="input-box">
+                    <span class="details">Class and Section</span>
+                    <input type="text" placeholder="Enter your class and section in the format X-A" required id="classandsec" name="classandsec">
+                </div>
+                {% if form.classandsec.errors %}
+                    <p class="error">{{ form.classandsec.errors[0] }}</p>
+                {% endif %}
+                <div class="input-box">
+                    <span class="details">Father's Name</span>
+                    <input type="text" placeholder="Enter your Father's Name" required id="father_name" name="father_name">
+                </div>
+                <div class="input-box">
+                    <span class="details">Mother's Name</span>
+                    <input type="text" placeholder="Enter your Mother's Name" required id="mother_name" name="mother_name">
+                </div>
+                <div class="input-box">
+                    <span class="details">Email ID</span>
+                    <input type="text" placeholder="Enter your Email Address" required id="email_id" name="email_id">
+                </div>
+                {% if form.email_id.errors %}
+                    <p class="error">{{ form.email_id.errors[0] }}</p>
+                {% endif %}
+            </div>
+            <div class="button">
+                <input type="submit" value="Login" id="submit" name="submit">
+            </div>
+        </form> 
+</div> 
+<script>
+</script>
+</body>
+</html>
