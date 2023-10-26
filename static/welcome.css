@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pass-box {
+    width: 100%;
+    max-width: 1400px;
+    background-color: #fff;
+    height: 575px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: left;
+}
+
+h1 {
+    white-space: nowrap;
+    color: #3498db;
+    font-size: 4rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3.5rem;
+    margin-top: 40px;
+    text-align: center;
+
+}
+
+.pass-info {
+    font-size: 1.5rem;
+    margin-top: 115px;
+    text-align: center;
+    line-height: 0.6;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 15px;
+    }
+
+    .pass-info {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+}
