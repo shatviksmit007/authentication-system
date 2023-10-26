@@ -1,7 +1,0 @@
--- database: c:\Users\Shatvik Smit\OneDrive\Desktop\sec mech\database.db
-
--- Use the ▷ button in the top right corner to run the entire file.
-
-
--- SELECT * FROM "students";
-ALTER TABLE students RENAME COLUMN phone_number TO email_id; 
